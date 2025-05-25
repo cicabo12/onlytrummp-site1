@@ -2,23 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>OnlyTrummp</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      background: #020617;
-      color: white;
+      background: #0f172a;
       font-family: sans-serif;
+      color: white;
     }
     .hero {
       text-align: center;
       padding: 4rem 2rem;
     }
-    .spin-img {
+    .spin {
+      width: 200px;
+      height: auto;
       margin: auto;
-      width: 220px;
       animation: spin 12s linear infinite;
     }
     @keyframes spin {
@@ -26,13 +27,13 @@
       100% { transform: rotate(360deg); }
     }
     .btn {
-      background-color: #facc15;
+      background: #facc15;
       color: black;
-      padding: 0.75rem 1.5rem;
       font-weight: bold;
+      padding: 0.75rem 1.25rem;
+      margin: 0.5rem;
       border-radius: 0.5rem;
       display: inline-block;
-      margin-top: 1.5rem;
     }
     .how-to {
       background: linear-gradient(to right, #7c3aed, #4c1d95);
@@ -40,39 +41,43 @@
       text-align: center;
     }
     .how-to-box {
-      max-width: 640px;
+      max-width: 600px;
       margin: auto;
-      background: rgba(255,255,255,0.05);
       padding: 2rem;
+      background: rgba(255,255,255,0.05);
       border-radius: 1rem;
-      font-size: 1.125rem;
+      text-align: left;
+      font-size: 1.1rem;
     }
     .how-to-box div {
-      margin: 1rem 0;
-      font-weight: 600;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO SECTION -->
+  <!-- Hero -->
   <section class="hero">
-    <img src="images/spin.png" alt="Trump Spinning" class="spin-img">
-    <h1 class="text-5xl font-extrabold text-yellow-400 mt-6">OnlyTrummp</h1>
-    <p class="text-xl text-gray-300 mt-2">The Meme Token with Message Madness 💬</p>
-    <a href="https://x.com/OnlyTrump2025" class="btn mt-4">Follow on Twitter</a>
+    <img src="images/spin.png" alt="Trump spinning" class="spin">
+    <h1 class="text-5xl font-bold text-yellow-400 mt-6">OnlyTrummp</h1>
+    <p class="text-xl text-gray-300 mb-6">The Meme Coin With a Message 💬</p>
+    <div>
+      <a href="#" class="btn">Buy</a>
+      <a href="#" class="btn">View Chart</a>
+      <a href="https://x.com/OnlyTrump2025" class="btn">Twitter</a>
+    </div>
   </section>
 
-  <!-- HOW TO BUY SECTION -->
+  <!-- How to Buy -->
   <section class="how-to">
-    <h2 class="text-4xl font-bold mb-10">How to Buy</h2>
-    <div class="how-to-box text-left">
+    <h2 class="text-4xl font-bold mb-8 text-white">How to Buy</h2>
+    <div class="how-to-box text-white">
       <div>1️⃣ Create a Wallet – Download Phantom or Solflare</div>
-      <div>2️⃣ Get SOL – Buy on an exchange and send to wallet</div>
+      <div>2️⃣ Get SOL – Buy on exchange and send to your wallet</div>
       <div>3️⃣ Connect to PumpSwap – Visit and link your wallet</div>
       <div>4️⃣ Swap SOL for $ONLYTRUMMP – Set slippage to 5%</div>
     </div>
-    <div class="text-center mt-10">
+    <div class="mt-10">
       <a href="#" class="btn">Buy on PumpSwap</a>
     </div>
   </section>
