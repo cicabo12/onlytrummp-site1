@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OnlyTrummp</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
@@ -12,22 +12,18 @@
       color: white;
       font-family: sans-serif;
     }
-    .container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
+    .hero {
+      text-align: center;
       padding: 4rem 2rem;
     }
-    .left {
-      max-width: 45%;
+    .spin-img {
+      margin: auto;
+      width: 200px;
+      animation: spin 10s linear infinite;
     }
-    .left h1 {
-      font-size: 4rem;
-      font-weight: bold;
-      color: #facc15;
-      margin-bottom: 1rem;
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
     .btn {
       background-color: #facc15;
@@ -35,76 +31,50 @@
       padding: 0.75rem 1.5rem;
       font-weight: bold;
       border-radius: 0.5rem;
-      margin: 0.5rem 0.5rem 0 0;
       display: inline-block;
+      margin-top: 1.5rem;
     }
-    .right {
-      position: relative;
-      width: 45%;
-      height: 400px;
-    }
-    .floating {
-      position: absolute;
-      animation: float 6s ease-in-out infinite;
-    }
-    .floating:nth-child(1) {
-      top: 0;
-      left: 10%;
-      animation-delay: 0s;
-    }
-    .floating:nth-child(2) {
-      top: 40%;
-      left: 50%;
-      animation-delay: 2s;
-    }
-    .floating:nth-child(3) {
-      top: 20%;
-      left: 70%;
-      animation-delay: 4s;
-    }
-    @keyframes float {
-      0% { transform: translateY(0px); opacity: 1; }
-      50% { transform: translateY(-30px); opacity: 0.8; }
-      100% { transform: translateY(0px); opacity: 1; }
-    }
-    .footer {
+    .how-to {
       background: linear-gradient(to right, #7c3aed, #4c1d95);
+      padding: 4rem 2rem;
       text-align: center;
-      padding: 2rem;
-      color: white;
     }
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        text-align: center;
-      }
-      .left, .right {
-        width: 100%;
-        max-width: 100%;
-      }
+    .how-to-box {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255,255,255,0.05);
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+    .how-to-box div {
+      margin: 1rem 0;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="left">
-      <h1>OnlyTrummp</h1>
-      <p class="mb-6">The Sugar Daddy of Meme Coins 💘</p>
-      <a href="#" class="btn">🚀 Buy</a>
-      <a href="#" class="btn">📈 View Chart</a>
-      <a href="https://x.com/OnlyTrump2025" class="btn">Twitter</a>
-    </div>
-    <div class="right">
-      <img src="images/trump1.png" class="floating" style="width:100px;" alt="Trump Head">
-      <img src="images/trump1.png" class="floating" style="width:80px;" alt="Trump Head">
-      <img src="images/trump1.png" class="floating" style="width:120px;" alt="Trump Head">
-    </div>
-  </div>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img src="images/spin.png" alt="Trump Spin" class="spin-img">
+    <h1 class="text-5xl font-extrabold text-yellow-400 mt-6">OnlyTrummp</h1>
+    <p class="text-xl text-gray-300 mt-2">Meme Token with Message Power 💬</p>
+    <a href="https://x.com/OnlyTrump2025" class="btn mt-4">Follow on Twitter</a>
+  </section>
 
-  <div class="footer">
-    💖 OnlyTrummp — Sugar Daddy Energy © 2025
-  </div>
+  <!-- HOW TO BUY SECTION -->
+  <section class="how-to text-white">
+    <h2 class="text-4xl font-bold mb-10">How to Buy</h2>
+    <div class="how-to-box text-left text-lg">
+      <div>1️⃣ Create a Wallet – Download Phantom or Solflare</div>
+      <div>2️⃣ Get SOL – Buy on exchange and send to wallet</div>
+      <div>3️⃣ Connect to PumpSwap – Visit and link your wallet</div>
+      <div>4️⃣ Swap SOL for $ONLYTRUMMP – Set slippage to 5%</div>
+    </div>
+    <div class="text-center mt-10">
+      <a href="#" class="btn">Buy on PumpSwap</a>
+    </div>
+  </section>
 
 </body>
 </html>
